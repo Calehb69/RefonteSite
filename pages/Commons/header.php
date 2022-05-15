@@ -1,3 +1,9 @@
+<?php 
+include("../../utile/formatage.php"); 
+include("../../utile/config.php"); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +15,7 @@
     <link href="../../css/main.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet">
+    
 </head>
 <body>
     <div class='container p-0 mt-2 rounded perso_shadow'>
@@ -16,17 +23,18 @@
         <header class='bg-dark text-white rounded-top perso_policeTitre'>
             <div class='row align-items-center m-0'>
                 <div class='col-2 p-2 text-center'>
-                    <a href='index.php'>
+                    <a href='../Global/index.php'>
                         <img src='../../sources/images/Autres/logoNANA2.jpg' class='rounded-circle img-fluid perso_logoSize' alt='logo du site' />
                     </a>
                 </div>
-                <div class='col-8 m-0 p-0'>
+
+                <div class='col-6 col-lg-8 m-0 p-0'>
                     <?php include("../Commons/menu.php") ?>
                 </div>
-                <div class='col-2 text-right pt-1 pr-4 d-none d-lg-block'>
+                <div class='col-4 col-lg-2 text-right pt-1 pr-4'>
                     N.A.N.A <br /> Clermont (09)
                 </div>
             </div>
         </header>
         <!-- Contenu du site -->
-        <div class='border p-1 perso_minCorpSize'>
+        <div class='border p-1 perso_minCorpSize px-5'>
