@@ -68,7 +68,7 @@ isset($_POST['captcha']) && !empty($_POST['captcha'])
         <select class='form-control col' id="objet" name="objet">
             <option value="question">Question</option>
             <option value="adoption">Adoption</option>
-            <option value="donnation">Donnation</option>
+            <option value="donnation">Donation</option>
             <option value="autre">Autre</option>
         </select>
     </div>
