@@ -36,14 +36,18 @@
         </div>
     </div>
     <div class="col-12 col-md-4">
-        Frais d'adoption : 60€<br />
-        Vaccins : 35€ (à la demande de l'adoptant)<br />
-        Stérilisation : caution de 200 € vous sera demandée (rendue après réception du certificat)
+        <?php if((int) $animal['id_statut'] !== ID_STATUT_A_L_ADOPTION ) {
+            echo $animal['date_adoption_animal'];
+            } else { ?>  
+                Frais d'adoption : 60€<br />
+                Vaccins : 35€ (à la demande de l'adoptant)<br />
+                Stérilisation : caution de 200 € vous sera demandée (rendue après réception du certificat)
+            <?php } ?>
     </div>
 </div>
 
 <div class="row no-gutters align-items-center">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-6 p-3">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <?php foreach($images as $key => $image) : ?>
@@ -53,7 +57,7 @@
         <div class="carousel-inner text-center">
             <?php foreach($images as $key => $image) : ?>
                 <div class="carousel-item <?php echo ($key === 0) ? "active" : "" ?>">
-                    <img src="<?= URL ?>public/sources/images/sites/<?= $image['url_image']?>" class="img-thumbnail" style="height:500px" alt="<?= $image['libelle_image']?>">
+                    <img src="<?= URL ?>public/sources/images/sites/<?= $image['url_image']?>" class="img-thumbnail" style="max-height:500px" alt="<?= $image['libelle_image']?>">
                 </div>
             <?php endforeach; ?>
         </div>
@@ -70,22 +74,22 @@
     <div class="col-12 col-lg-6">
         <div>  
             <?= styleTitreNiveau2("Qui suis-je ?", COLOR_PENSIONNAIRE) ?>
-            <?= $animal['description_animal']?>
+            <?= nl2br($animal['description_animal'])?>
         </div>
         <hr />
         <div>
             <img src="<?= URL ?>public/sources/images/Autres/icones/IconeAdopt.png" alt="" width="50" height="50" class="d-block mx-auto">
-            <?= $animal['adoption_desc_animal']?>
+            <?= nl2br($animal['adoption_desc_animal'])?>
         </div>
         <hr />
         <div>
             <img src="<?= URL ?>public/sources/images/Autres/icones/oeil.jpg" alt="" width="50" height="50" class="d-block mx-auto">
-            <?= $animal['localisation_animal']?>
+            <?= nl2br($animal['localisation_animal'])?>
         </div>
         <hr />
         <div>
             <img src="<?= URL ?>public/sources/images/Autres/icones/iconeContrat.png" alt="" width="50" height="50" class="d-block mx-auto">
-            <?= $animal['engagement_animal']?>
+            <?= nl2br($animal['engagement_animal'])?>
         </div>
     </div>
 </div>

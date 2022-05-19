@@ -10,7 +10,10 @@
     <link href="<?= URL ?>public/css/main.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet">
-    
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 </head>
 <body>
     <div class='container p-0 mt-2 rounded perso_shadow'>
@@ -27,7 +30,7 @@
                     <?php include("views/commons/menu.php") ?>
                 </div>
                 <div class='col-4 col-lg-2 text-right pt-1 pr-4'>
-                    N.A.N.A <br /> Clermont (09)
+                    <a href="login" class='nav-link text-white text-center'> N.A.N.A <br /> Clermont (09)</a>
                 </div>
             </div>
         </header>
@@ -40,7 +43,6 @@
             <p class='p-2'>&copy; Association N.A.N.A 2018-2019 </p>      
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src='<?= URL ?>public/bootstrap/js/bootstrap.js'> </script>
 </body>

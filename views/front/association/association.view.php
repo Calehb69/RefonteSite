@@ -37,7 +37,7 @@
 <?= styleTitreNiveau2("L'équipe", COLOR_ASSO); ?>
 <div class='row align-items-center'>
     <div class='col-12 col-lg-3 text-center'>
-        <img class='img-fluid' style='height:250px' src='<?= URL ?>public/sources/images/Animaux/chat/Odin/Odin.jpg' alt='image Odin' />
+        <img class='img-fluid' style='height:250px' src='<?= URL ?>public/sources/images/sites/animaux/chat/odin/odin.jpg' alt='image Odin' />
     </div>
     <div class='col-12 col-lg-9'>
         <span class="badge badge-primary">Julie</span> : présidente<br />

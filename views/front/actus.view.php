@@ -6,12 +6,12 @@
     echo styleTitrePost("<span class='".COLOR_ACTUS."'>".$actualite['libelle_actualite']."</span> - Posté le : <span class='".COLOR_ACTUS."'>". date("d/m/Y", strtotime($actualite['date_publication_actualite']))." </span>");
     ?>
 
-    <div class='row no-gutters align-items-center' style="min-height:300px;">
+    <div class='row no-gutters align-items-center'>
         <div class="col-12 col-lg-3 text-center">
-            <img src="<?= URL ?>public/sources/images/sites/<?= $actualite['image']['url_image']?>" alt="<?= $actualite['image']['libelle_image']?>" style="max-height:280px" class="img-fluid p-1"/>
+            <img src="<?= URL ?>public/sources/images/sites/<?= $actualite['image']['url_image']?>" alt="<?= $actualite['image']['libelle_image']?>" style="max-height:280px" class="img-fluid p-1 img-thumbnail"/>
         </div>
-        <div class="col-12 col-lg-9">
-            <?= $actualite['contenu_actualite'] ?>
+        <div class="col-12 col-lg-9 p-3">
+            <?= nl2br($actualite['contenu_actualite']) ?>
         </div>
     </div>
 

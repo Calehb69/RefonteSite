@@ -31,13 +31,13 @@ echo styleTitreNiveau1("Ils ont besoin de vous !",COLOR_ASSO);
 <div class='row'>
     <div class='col-6 mt-3'>
         <?php 
-        $txt = "<img src='public/sources/images/Autres/icones/journal.png' alt='logo News'/>Nouvelles des adoptés";
+        $txt = "<img src='public/sources/images/Autres/icones/journal.png' alt='logo News' class='d-none d-md-inline'/>Nouvelles des adoptés";
         echo styleTitreNiveau2($txt,COLOR_ACTUS);
         ?>
     </div>
     <div class='col-6 mt-3'>
         <?php 
-        $txt = "<img src='public/sources/images/Autres/icones/action.png' alt='logo News'/>Evénements & Actions";
+        $txt = "<img src='public/sources/images/Autres/icones/action.png' alt='logo News' class='d-none d-md-inline'/>Evénements & Actions";
         echo styleTitreNiveau2($txt,COLOR_PENSIONNAIRE);
         ?>
     </div>
@@ -45,34 +45,35 @@ echo styleTitreNiveau1("Ils ont besoin de vous !",COLOR_ASSO);
 <div class='row'>
     <div class='col-6'>
         <div class='row no-gutters border rounded mb-4'>
-            <div class='col-auto d-none d-lg-block'>
-                <img src ='public/sources/images/sites/<?= $news['url_image'] ?>' style='height:150px;' alt='<?= $news['libelle_image'] ?>' />
+            <div class='col-12 col-lg-auto'>
+                <img src ='public/sources/images/sites/<?= $news['url_image'] ?>' style='height:150px;' class='d-block mx-auto' alt='<?= $news['libelle_image'] ?>' />
             </div>
-            <div class='col p-3 d-flew flex-column position-static perso_bgGreen'>
+            <div class='col px-3 py-1 d-flew flex-column position-static perso_bgGreen'>
                 <h3 class='mb-0 perso_ColorVertMenu perso_policeTitre perso_textShadow'><?= $news['libelle_actualite'] ?></h3>
                 <p class='perso_size12 mt-2'>
                     <?= affichageCoupe(nl2br($news['contenu_actualite']),100) ?>
                 </p>
-                <a href="<?= URL ?>actus&type=<?= TYPE_NEWS ?>" class='btn btn-primary'>Voir les nouvelles des adoptés </a>
+                <a href="<?= URL ?>actus&type=<?= TYPE_NEWS ?>" class='btn btn-primary'>Accéder aux news</a>
             </div>
         </div>
     </div>
     <div class='col-6'>
         <div class='row no-gutters border rounded mb-4'>
-            <div class='col-auto d-none d-lg-block'>
-            <img src ='public/sources/images/sites/<?= $action['url_image'] ?>' style='height:150px;' alt='<?= $action['libelle_image'] ?>' />
+            <div class='col-12 col-lg-auto'>
+                <img src ='public/sources/images/sites/<?= $action['url_image'] ?>' class='d-block mx-auto' style='height:150px;' alt='<?= $action['libelle_image'] ?>' />
             </div>
-            <div class='col p-3 d-flew flex-column position-static perso_bgOrange'>
+            <div class='col px-3 py-1 d-flew flex-column position-static perso_bgOrange'>
                 <h3 class='mb-0 perso_ColorOrangeMenu perso_policeTitre perso_textShadow'><?= $action['libelle_actualite'] ?></h3>
-                <p class='perso_size12 mt-2'>
+                <p class='perso_size12 mt-1'>
                     <?= affichageCoupe(nl2br($action['contenu_actualite']),100) ?>
                 </p>
-                <a href="<?= URL ?>actus&type=<?= TYPE_EVENTS ?>" class='btn btn-primary'>Les events </a>
-                <a href="<?= URL ?>actus&type=<?= TYPE_ACTIONS ?>" class='btn btn-primary'>Les actions </a>
+                <a href="<?= URL ?>actus&type=<?= TYPE_EVENTS ?>" class='btn btn-primary'>Events</a>
+                <a href="<?= URL ?>actus&type=<?= TYPE_ACTIONS ?>" class='btn btn-primary'>Actions</a>
             </div>
         </div>
     </div>
 </div>
+
 
 <?php
 $content = ob_get_clean();
